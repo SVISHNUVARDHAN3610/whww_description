@@ -1,0 +1,224 @@
+<?xml version="1.0" ?>
+<robot name="whww" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find whww_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find whww_description)/urdf/whww.trans" />
+<xacro:include filename="$(find whww_description)/urdf/whww.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.04585883365962684 -0.0026636938644224945 0.028232758685515214" rpy="0 0 0"/>
+    <mass value="0.017167494854929747"/>
+    <inertia ixx="1.3e-05" iyy="0.0" izz="1.3e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_top_1">
+  <inertial>
+    <origin xyz="1.663405894899994e-07 0.00250030613557721 -2.413144846134807e-07" rpy="0 0 0"/>
+    <mass value="0.007771895794701764"/>
+    <inertia ixx="2e-06" iyy="3e-06" izz="2e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.045859 0.042664 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/left_wheel_top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.045859 0.042664 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/left_wheel_top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel__top_1">
+  <inertial>
+    <origin xyz="1.6634058946918273e-07 -0.0024996938644228084 -2.4131448463776684e-07" rpy="0 0 0"/>
+    <mass value="0.007771895794701765"/>
+    <inertia ixx="2e-06" iyy="3e-06" izz="2e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.045859 -0.037336 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/right_wheel__top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.045859 -0.037336 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/right_wheel__top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="conn_1">
+  <inertial>
+    <origin xyz="0.03542321692160148 0.0026639999211384388 -2.4131448464470573e-07" rpy="0 0 0"/>
+    <mass value="0.002551675478926557"/>
+    <inertia ixx="0.0" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.045859 0.002664 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/conn_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.045859 0.002664 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/conn_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="joint2_1">
+  <inertial>
+    <origin xyz="0.02517278395582098 1.2636823872429204e-06 -0.004000241254879994" rpy="0 0 0"/>
+    <mass value="0.008500716830238663"/>
+    <inertia ixx="0.0" iyy="3e-06" izz="3e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.009141 0.0 -0.032233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/joint2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.009141 0.0 -0.032233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/joint2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="stand_bottom_1">
+  <inertial>
+    <origin xyz="3.031496232652753e-07 0.002333000000000297 -2.4125488015669383e-07" rpy="0 0 0"/>
+    <mass value="0.017846209767799062"/>
+    <inertia ixx="1.3e-05" iyy="0.0" izz="1.3e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.059107 0.002333 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/stand_bottom_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.059107 0.002333 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/stand_bottom_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_bottom_1">
+  <inertial>
+    <origin xyz="3.031498400710153e-07 -0.0025000000000000022 -2.412548800005687e-07" rpy="0 0 0"/>
+    <mass value="0.010028252638324858"/>
+    <inertia ixx="2e-06" iyy="5e-06" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.059107 -0.04 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/right_wheel_bottom_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.059107 -0.04 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/right_wheel_bottom_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel__bottom_1">
+  <inertial>
+    <origin xyz="3.0314984013346535e-07 0.0025000000000000022 -2.4125487997975203e-07" rpy="0 0 0"/>
+    <mass value="0.010028252638324856"/>
+    <inertia ixx="2e-06" iyy="5e-06" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.059107 0.04 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/left_wheel__bottom_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.059107 0.04 -0.028233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://whww_description/meshes/left_wheel__bottom_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev17" type="continuous">
+  <origin xyz="-0.045859 -0.042664 0.028233" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_top_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rev18" type="continuous">
+  <origin xyz="-0.045859 0.037336 0.028233" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel__top_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev19" type="continuous">
+  <origin xyz="-0.045859 -0.002664 0.028233" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="conn_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev20" type="continuous">
+  <origin xyz="0.055 0.002664 0.004" rpy="0 0 0"/>
+  <parent link="conn_1"/>
+  <child link="joint2_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="Rev21" type="continuous">
+  <origin xyz="0.049966 -0.002333 -0.004" rpy="0 0 0"/>
+  <parent link="joint2_1"/>
+  <child link="stand_bottom_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev22" type="continuous">
+  <origin xyz="0.0 0.042333 0.0" rpy="0 0 0"/>
+  <parent link="stand_bottom_1"/>
+  <child link="right_wheel_bottom_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev23" type="continuous">
+  <origin xyz="0.0 -0.037667 0.0" rpy="0 0 0"/>
+  <parent link="stand_bottom_1"/>
+  <child link="left_wheel__bottom_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+</robot>
